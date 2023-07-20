@@ -1,7 +1,7 @@
 # typed: false
 # frozen_string_literal: true
 
-class Ksw < Formula
+class KswHead < Formula
   desc "Switch Kubeconfig context in new shell"
   homepage "https://github.com/chickenzord/ksw"
   license "MIT"
