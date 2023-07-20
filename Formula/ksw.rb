@@ -5,23 +5,23 @@
 class Ksw < Formula
   desc "Switch Kubeconfig context in new shell"
   homepage "https://github.com/chickenzord/ksw"
-  version "0.2.1"
+  version "0.2.2"
   license "MIT"
 
   depends_on "go" => :build
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/chickenzord/ksw/releases/download/v0.2.1/ksw_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "9272a026af6aaaa9043a6ee706139016d0a63d9509074120ebecb8a7fe4ea224"
+      url "https://github.com/chickenzord/ksw/releases/download/v0.2.2/ksw_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "b941157f6e4a0dbadd28e54ade7a8e3455f51241eed34511cb8c251f61fdcf50"
 
       def install
         bin.install "ksw"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/chickenzord/ksw/releases/download/v0.2.1/ksw_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "c4d6b0136a1d162c7f541b26c920ef17553c62b773016aa3d01d944f354bf9c2"
+      url "https://github.com/chickenzord/ksw/releases/download/v0.2.2/ksw_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "a71e48d68f5c4911ad84297ed014a0ba0f452ad7635e9f8ac2fa10fb8c3daf41"
 
       def install
         bin.install "ksw"
@@ -31,16 +31,16 @@ class Ksw < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chickenzord/ksw/releases/download/v0.2.1/ksw_Linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "b70f7e6c06eee92a93ab4b1bfadd0856b8b8e3ccd5a3759986a49e5e5e5f2ed3"
+      url "https://github.com/chickenzord/ksw/releases/download/v0.2.2/ksw_Linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "3b2a6c9e4223f321f02ef014be428c89645aa4a46521af5bfb290e07a061eef6"
 
       def install
         bin.install "ksw"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/chickenzord/ksw/releases/download/v0.2.1/ksw_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "528a64347d94da06ef0393557e14109436c5bde591e589da2d1f5bb3b41e523b"
+      url "https://github.com/chickenzord/ksw/releases/download/v0.2.2/ksw_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "ed5168bf15fef73e936cee95142ae115818251477486ccd736c1508dafa0a183"
 
       def install
         bin.install "ksw"
@@ -48,5 +48,5 @@ class Ksw < Formula
     end
   end
 
-  head "https://github.com/chickenzord/ksw.git"
+  head "https://github.com/chickenzord/ksw.git", branch: "main"
 end
