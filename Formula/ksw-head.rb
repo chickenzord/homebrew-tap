@@ -13,5 +13,6 @@ class KswHead < Formula
 
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w"), "."
+    bin.install "ksw-head" => "ksw"
   end
 end
