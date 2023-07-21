@@ -5,48 +5,65 @@
 class Ksw < Formula
   desc "Switch Kubeconfig context in new shell"
   homepage "https://github.com/chickenzord/ksw"
-  version "0.2.2"
+  version "0.2.3"
   license "MIT"
 
-  depends_on "go" => :build
-
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/chickenzord/ksw/releases/download/v0.2.2/ksw_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "b941157f6e4a0dbadd28e54ade7a8e3455f51241eed34511cb8c251f61fdcf50"
+    if Hardware::CPU.arm?
+      url "https://github.com/chickenzord/ksw/releases/download/v0.2.3/ksw_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "bd659230b10b6dc48b7f0fb3dc109c937c0656e56d76e33ddbe2abc6359d1e5f"
 
       def install
-        bin.install "ksw"
+        if build.head?
+          system "go", "build", *std_go_args(ldflags: "-s -w"), "."
+        else
+          bin.install "ksw"
+        end
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/chickenzord/ksw/releases/download/v0.2.2/ksw_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "a71e48d68f5c4911ad84297ed014a0ba0f452ad7635e9f8ac2fa10fb8c3daf41"
+    if Hardware::CPU.intel?
+      url "https://github.com/chickenzord/ksw/releases/download/v0.2.3/ksw_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "57e5b581b23e2dcae1b5647a9d273b86c2386139d61a5877039d590ab1539c1b"
 
       def install
-        bin.install "ksw"
+        if build.head?
+          system "go", "build", *std_go_args(ldflags: "-s -w"), "."
+        else
+          bin.install "ksw"
+        end
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chickenzord/ksw/releases/download/v0.2.2/ksw_Linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "3b2a6c9e4223f321f02ef014be428c89645aa4a46521af5bfb290e07a061eef6"
+      url "https://github.com/chickenzord/ksw/releases/download/v0.2.3/ksw_Linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "8ab5c9c3c027bfd7a04be611421c3de3eff92b81d8a46da6d4874b3ac4560713"
 
       def install
-        bin.install "ksw"
+        if build.head?
+          system "go", "build", *std_go_args(ldflags: "-s -w"), "."
+        else
+          bin.install "ksw"
+        end
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/chickenzord/ksw/releases/download/v0.2.2/ksw_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "ed5168bf15fef73e936cee95142ae115818251477486ccd736c1508dafa0a183"
+      url "https://github.com/chickenzord/ksw/releases/download/v0.2.3/ksw_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "4f2bff438188e376c18fbe9160dd9c1c61c7129639215be2805651318c2643fd"
 
       def install
-        bin.install "ksw"
+        if build.head?
+          system "go", "build", *std_go_args(ldflags: "-s -w"), "."
+        else
+          bin.install "ksw"
+        end
       end
     end
   end
 
-  head "https://github.com/chickenzord/ksw.git", branch: "main"
+  head do
+    url "https://github.com/chickenzord/ksw.git", branch: "main"
+    depends_on "go" => :build
+  end
 end
