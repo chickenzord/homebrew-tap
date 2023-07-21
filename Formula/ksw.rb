@@ -5,13 +5,13 @@
 class Ksw < Formula
   desc "Switch Kubeconfig context in new shell"
   homepage "https://github.com/chickenzord/ksw"
-  version "0.2.3"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/chickenzord/ksw/releases/download/v0.2.3/ksw_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "bd659230b10b6dc48b7f0fb3dc109c937c0656e56d76e33ddbe2abc6359d1e5f"
+      url "https://github.com/chickenzord/ksw/releases/download/v0.3.0/ksw_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "de915dba1bc5d615a65b65f779937b0a0a985b4544945cea29dc3a0ce5a39c0d"
 
       def install
         if build.head?
@@ -22,8 +22,8 @@ class Ksw < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/chickenzord/ksw/releases/download/v0.2.3/ksw_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "57e5b581b23e2dcae1b5647a9d273b86c2386139d61a5877039d590ab1539c1b"
+      url "https://github.com/chickenzord/ksw/releases/download/v0.3.0/ksw_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "fa65455a3c78f39bbf9b83d7ad57278041fd9437875833bc1836281f70e0b543"
 
       def install
         if build.head?
@@ -37,8 +37,8 @@ class Ksw < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chickenzord/ksw/releases/download/v0.2.3/ksw_Linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "8ab5c9c3c027bfd7a04be611421c3de3eff92b81d8a46da6d4874b3ac4560713"
+      url "https://github.com/chickenzord/ksw/releases/download/v0.3.0/ksw_Linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "26d9228df660dc6fd830a779645be8abcbc6bca48d9d9655f016b5bdf4db98c7"
 
       def install
         if build.head?
@@ -49,8 +49,8 @@ class Ksw < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/chickenzord/ksw/releases/download/v0.2.3/ksw_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "4f2bff438188e376c18fbe9160dd9c1c61c7129639215be2805651318c2643fd"
+      url "https://github.com/chickenzord/ksw/releases/download/v0.3.0/ksw_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "386a75a4e2c5a174a824a175879e9f15daae71516938859b7688163081ae4443"
 
       def install
         if build.head?
