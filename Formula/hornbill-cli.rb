@@ -4,6 +4,9 @@ class HornbillCli < Formula
   version "0.1.3"
   license "AGPL-3.0-only"
 
+  url "https://github.com/chickenzord/hornbill/releases/download/v0.1.3/hornbill-linux-x64"
+  sha256 "fb95c637e392ec9bf016e21f65f874591a1426d5e0ea761f05ff3166f96793c7"
+
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/chickenzord/hornbill/releases/download/v0.1.3/hornbill-darwin-arm64"
@@ -23,9 +26,6 @@ class HornbillCli < Formula
       sha256 "fb95c637e392ec9bf016e21f65f874591a1426d5e0ea761f05ff3166f96793c7"
     end
   end
-
-  url "https://github.com/chickenzord/hornbill/releases/download/v0.1.3/hornbill-linux-x64"
-  sha256 "fb95c637e392ec9bf016e21f65f874591a1426d5e0ea761f05ff3166f96793c7"
 
   head "https://github.com/chickenzord/hornbill.git", branch: "main"
 
