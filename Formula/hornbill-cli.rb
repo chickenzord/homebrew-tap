@@ -1,31 +1,31 @@
 class HornbillCli < Formula
   desc "CLI client for Hornbill bill tracker"
   homepage "https://github.com/chickenzord/hornbill"
-  version "0.1.2"
+  version "0.1.3"
   license "AGPL-3.0-only"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/chickenzord/hornbill/releases/download/v0.1.2/hornbill-darwin-arm64"
-      sha256 "35a9f00393203afe639243de13cf8799d4dd2c639d0f4a0acf579b8308785984"
+      url "https://github.com/chickenzord/hornbill/releases/download/v0.1.3/hornbill-darwin-arm64"
+      sha256 "94ad5c911206ad08f2e2495649188df67db120bb903ef1f06984703f2612dc00"
     else
-      url "https://github.com/chickenzord/hornbill/releases/download/v0.1.2/hornbill-darwin-x64"
-      sha256 "6496cec2395dc313e5aa37f420f6051533bc503ddf211fdcd0a86c228900d0b1"
+      url "https://github.com/chickenzord/hornbill/releases/download/v0.1.3/hornbill-darwin-x64"
+      sha256 "1ff7405ad792186ba7f9b3fe6815af7f452b8a016110cb3cf04973794a2c26da"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/chickenzord/hornbill/releases/download/v0.1.2/hornbill-linux-arm64"
-      sha256 "5f6c4cf7c4b77ee3a0553908b220b5d9f641740d8caf337d2528ab8fae7ee819"
+      url "https://github.com/chickenzord/hornbill/releases/download/v0.1.3/hornbill-linux-arm64"
+      sha256 "f967a9a7a2ef84872367213f12e583bf76085788e292e585a906833ea464a4e2"
     else
-      url "https://github.com/chickenzord/hornbill/releases/download/v0.1.2/hornbill-linux-x64"
-      sha256 "1f48690db799dec2707dc6330dc144f73dcb090b486a1af83d734321447d18d1"
+      url "https://github.com/chickenzord/hornbill/releases/download/v0.1.3/hornbill-linux-x64"
+      sha256 "fb95c637e392ec9bf016e21f65f874591a1426d5e0ea761f05ff3166f96793c7"
     end
   end
 
-  url "https://github.com/chickenzord/hornbill/releases/download/v0.1.2/hornbill-linux-x64"
-  sha256 "1f48690db799dec2707dc6330dc144f73dcb090b486a1af83d734321447d18d1"
+  url "https://github.com/chickenzord/hornbill/releases/download/v0.1.3/hornbill-linux-x64"
+  sha256 "fb95c637e392ec9bf016e21f65f874591a1426d5e0ea761f05ff3166f96793c7"
 
   head "https://github.com/chickenzord/hornbill.git", branch: "main"
 
