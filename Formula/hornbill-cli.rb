@@ -37,12 +37,18 @@ class HornbillCli < Formula
       system "bun", "run", "--cwd", "packages/cli", "build"
       bin.install "packages/cli/bin/hornbill"
     else
-      binary_name = if OS.mac?
-        Hardware::CPU.arm? ? "hornbill-darwin-arm64" : "hornbill-darwin-x64"
+      # Homebrew renames single-file downloads to the formula name (hornbill-cli)
+      # but we check both names to be safe.
+      if File.exist?("hornbill-cli")
+        bin.install "hornbill-cli" => "hornbill"
       else
-        Hardware::CPU.arm? ? "hornbill-linux-arm64" : "hornbill-linux-x64"
+        binary_name = if OS.mac?
+          Hardware::CPU.arm? ? "hornbill-darwin-arm64" : "hornbill-darwin-x64"
+        else
+          Hardware::CPU.arm? ? "hornbill-linux-arm64" : "hornbill-linux-x64"
+        end
+        bin.install binary_name => "hornbill"
       end
-      bin.install binary_name => "hornbill"
     end
   end
 
