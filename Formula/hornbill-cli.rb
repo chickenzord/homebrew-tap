@@ -1,29 +1,29 @@
 class HornbillCli < Formula
   desc "CLI client for Hornbill bill tracker"
   homepage "https://github.com/chickenzord/hornbill"
-  version "0.1.4"
+  version "0.1.5"
   license "AGPL-3.0-only"
 
-  url "https://github.com/chickenzord/hornbill/releases/download/v0.1.4/hornbill-linux-x64"
-  sha256 "0b1dc23f7aae4fdf972b2445a8ebbd8e117b769a8cd39824c8533db39eee9bbe"
+  url "https://github.com/chickenzord/hornbill/releases/download/v0.1.5/hornbill-linux-x64"
+  sha256 "9104bba4d1f833da47c7f77be128ba07e270e9d0204f5aa39013361e44e39cbb"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/chickenzord/hornbill/releases/download/v0.1.4/hornbill-darwin-arm64"
-      sha256 "0d0455e48e4b8d83bf2e5e6c12d4008f9a73522208bd46167c74c584cfca1ec0"
+      url "https://github.com/chickenzord/hornbill/releases/download/v0.1.5/hornbill-darwin-arm64"
+      sha256 "fd3022a53ca7e0f14a4ac8406b91d11c033bf27f34848b7b687b32cbe551267a"
     else
-      url "https://github.com/chickenzord/hornbill/releases/download/v0.1.4/hornbill-darwin-x64"
-      sha256 "c72c5a51ff38df338fa94cddb946614afcc993bb389617972ca0c50dee1343fc"
+      url "https://github.com/chickenzord/hornbill/releases/download/v0.1.5/hornbill-darwin-x64"
+      sha256 "3943144c037d7c188ceb46ad5d829f03cd0fa240b20b0d9d747bd33731f3ec8a"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/chickenzord/hornbill/releases/download/v0.1.4/hornbill-linux-arm64"
-      sha256 "2ee281ecd4fc665413569e29cf8ec383436ae6aac65fe71a4e5b0a6e8126f6b7"
+      url "https://github.com/chickenzord/hornbill/releases/download/v0.1.5/hornbill-linux-arm64"
+      sha256 "83ba84d99c6c41a09352d627b09e0d32f31c6b7ea46a26b7fa72f71dc842903c"
     else
-      url "https://github.com/chickenzord/hornbill/releases/download/v0.1.4/hornbill-linux-x64"
-      sha256 "0b1dc23f7aae4fdf972b2445a8ebbd8e117b769a8cd39824c8533db39eee9bbe"
+      url "https://github.com/chickenzord/hornbill/releases/download/v0.1.5/hornbill-linux-x64"
+      sha256 "9104bba4d1f833da47c7f77be128ba07e270e9d0204f5aa39013361e44e39cbb"
     end
   end
 
