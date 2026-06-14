@@ -1,29 +1,29 @@
 class HornbillCli < Formula
   desc "CLI client for Hornbill bill tracker"
   homepage "https://github.com/chickenzord/hornbill"
-  version "0.1.5"
+  version "0.2.0"
   license "AGPL-3.0-only"
 
-  url "https://github.com/chickenzord/hornbill/releases/download/v0.1.5/hornbill-linux-x64"
-  sha256 "9104bba4d1f833da47c7f77be128ba07e270e9d0204f5aa39013361e44e39cbb"
+  url "https://github.com/chickenzord/hornbill/releases/download/v0.2.0/hornbill-linux-x64"
+  sha256 "73346ec5eccd96e677e2021dfac1216ca8dd78f92bc9d86eb3263365c2b9a328"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/chickenzord/hornbill/releases/download/v0.1.5/hornbill-darwin-arm64"
-      sha256 "fd3022a53ca7e0f14a4ac8406b91d11c033bf27f34848b7b687b32cbe551267a"
+      url "https://github.com/chickenzord/hornbill/releases/download/v0.2.0/hornbill-darwin-arm64"
+      sha256 "fc31d9908def2e79820101b9fc6099b6159a963741f3adc70c0d35de82eb47e1"
     else
-      url "https://github.com/chickenzord/hornbill/releases/download/v0.1.5/hornbill-darwin-x64"
-      sha256 "3943144c037d7c188ceb46ad5d829f03cd0fa240b20b0d9d747bd33731f3ec8a"
+      url "https://github.com/chickenzord/hornbill/releases/download/v0.2.0/hornbill-darwin-x64"
+      sha256 "5d017cfc4fb09c6ca95f63cc53634d0d1562791deacba3742f3ed20d1c2768dd"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/chickenzord/hornbill/releases/download/v0.1.5/hornbill-linux-arm64"
-      sha256 "83ba84d99c6c41a09352d627b09e0d32f31c6b7ea46a26b7fa72f71dc842903c"
+      url "https://github.com/chickenzord/hornbill/releases/download/v0.2.0/hornbill-linux-arm64"
+      sha256 "21323050801610a131e2fc25f246c8d5b506f3d28c3441d0e1b3e0198acc320b"
     else
-      url "https://github.com/chickenzord/hornbill/releases/download/v0.1.5/hornbill-linux-x64"
-      sha256 "9104bba4d1f833da47c7f77be128ba07e270e9d0204f5aa39013361e44e39cbb"
+      url "https://github.com/chickenzord/hornbill/releases/download/v0.2.0/hornbill-linux-x64"
+      sha256 "73346ec5eccd96e677e2021dfac1216ca8dd78f92bc9d86eb3263365c2b9a328"
     end
   end
 
